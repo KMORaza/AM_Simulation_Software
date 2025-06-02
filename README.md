@@ -119,4 +119,4 @@ The software models AM signals in time and frequency domains, simulating realist
 
 ## Screenshots
 
-![](https://github.com/KMORaza/AM_Simulation_Software/blob/main/AM%20Software/009/Screenshot.png)
+![](https://raw.githubusercontent.com/KMORaza/AM_Simulation_Software/refs/heads/main/AM%20Software/009/Screenshot.png)
