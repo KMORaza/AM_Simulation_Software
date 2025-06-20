@@ -33,11 +33,11 @@ The software models AM signals in time and frequency domains, simulating realist
 
 - **Time-Domain Simulation**:
   - **Signal Generation**:
-    - Message: m(t) = Am * sin(2 * pi * fm * t), with amplitude Am, frequency fm.
-    - Carrier: c(t) = Ac * cos(2 * pi * fc * t), with amplitude Ac, frequency fc.
+    - Message: `m(t) = Am * sin(2 * pi * fm * t)`, with amplitude `Am`, frequency `fm`.
+    - Carrier: `c(t) = Ac * cos(2 * pi * fc * t)`, with amplitude `Ac`, frequency `fc`.
   - **Modulation**:
-    - DSB-AM: s(t) = Ac * [1 + m * m(t)] * cos(2 * pi * fc * t), m is modulation index.
-    - DSB-SC: s(t) = Ac * m(t) * cos(2 * pi * fc * t), no carrier.
+    - DSB-AM: `s(t) = Ac * [1 + m * m(t)] * cos(2 * pi * fc * t)`, `m` is modulation index.
+    - DSB-SC: `s(t) = Ac * m(t) * cos(2 * pi * fc * t)`, no carrier.
     - SSB: Transmits one sideband (upper/lower).
     - VSB: One sideband plus partial other sideband.
     - QAM: Two signals on orthogonal carriers.
@@ -47,13 +47,13 @@ The software models AM signals in time and frequency domains, simulating realist
   - **Animation**: Updates plots at ~60 FPS for continuous signal simulation.
 - **Frequency-Domain Simulation**:
   - **Spectrum**:
-    - FFT transforms signals to show peaks at fm, fc, and sidebands (fc ± fm).
+    - FFT transforms signals to show peaks at `fm`, `fc`, and sidebands `(fc ± fm)`.
   - **Dynamic Updates**:
     - Spectra adjust in real-time with parameter changes.
   - **Filtering**:
     - Low-pass for demodulation, band-pass for SSB/VSB.
 - **Modeling**:
-  - Discrete-time signals with sampling frequency fs >> 2 * (fc + fm).
+  - Discrete-time signals with sampling frequency `fs >> 2 * (fc + fm)`.
   - Noise as additive white Gaussian noise (AWGN) with adjustable amplitude.
 - **Variants**:
   - DSB-AM: Carrier + sidebands.
@@ -81,10 +81,10 @@ The software models AM signals in time and frequency domains, simulating realist
   - Algorithm: Box-Muller transform.
   - Purpose: Channel noise for SNR.
 - **THD Calculation**:
-  - Formula: THD = sqrt(V2^2 + V3^2 + ... + Vn^2) / V1, V1 is fundamental, V2-Vn are harmonics.
+  - Formula: `THD = sqrt(V2^2 + V3^2 + ... + Vn^2) / V1`, `V1` is fundamental, `V2-Vn` are harmonics.
   - Algorithm: Peak detection in FFT, power summation.
 - **SNR Calculation**:
-  - Formula: SNR = 10 * log10(Psignal / Pnoise), Psignal and Pnoise from frequency bands.
+  - Formula: `SNR = 10 * log10(Psignal / Pnoise)`, `Psignal` and `Pnoise` from frequency bands.
   - Algorithm: Power integration in FFT spectrum.
 - **Animation**:
   - Incremental signal updates at 16 ms intervals (~60 FPS).
@@ -94,11 +94,11 @@ The software models AM signals in time and frequency domains, simulating realist
 
 - **AM Signal**:
   - Carrier amplitude varies with message.
-  - DSB-AM: s(t) = Ac * [1 + m * cos(2 * pi * fm * t)] * cos(2 * pi * fc * t).
-  - Spectrum: Peaks at fc, fc ± fm.
+  - DSB-AM: `s(t) = Ac * [1 + m * cos(2 * pi * fm * t)] * cos(2 * pi * fc * t)`.
+  - Spectrum: Peaks at `fc`, `fc ± fm`.
 - **Signals**:
-  - Message: m(t) = Am * sin(2 * pi * fm * t), e.g., fm = 1 kHz.
-  - Carrier: c(t) = Ac * cos(2 * pi * fc * t), e.g., fc = 10 kHz.
+  - Message: `m(t) = Am * sin(2 * pi * fm * t)`, e.g., `fm = 1 kHz`.
+  - Carrier: `c(t) = Ac * cos(2 * pi * fc * t)`, e.g., `fc = 10 kHz`.
   - Physics: Electromagnetic wave modulation.
 - **Noise**:
   - AWGN models thermal noise, zero mean, variable variance.
